@@ -45,38 +45,43 @@
 ### 프로젝트 구조
 
 ```
-├── README.md
-├── .gitignore
-│
-└── Recommendation_System
-        ├── manage.py
-        ├── .gitignore
-        ├── Recommendation_System
-        │     ├── __init__.py
-        │     ├── asgi.py
-        │     ├── settings.py
-        │     ├── urls.py
-        │     └── wsgi.py
-        ├── recommend
-        │     ├── migrations
-        │     ├── __init__.py
-        │     ├── admin.py
-        │     ├── apps.py
-        │     ├── forms.py
-        │     ├── models.py
-        │     ├── tests.py
-        │     ├── urls.py
-        │     └── views.py
-        ├── templates
-        │     ├── data.html
-        │     ├── index.html
-        │     ├── service.html
-        │     ├── service1.html
-        │     └── service2.html
-        └── static
-              ├── css
-              ├── image
-              └── js
+📦Recommendation_System
+ ┣ 📂recommend
+ ┃ ┣ 📂migrations
+ ┃ ┣ 📂__pycache__
+ ┃ ┣ 📜admin.py
+ ┃ ┣ 📜apps.py
+ ┃ ┣ 📜forms.py
+ ┃ ┣ 📜models.py
+ ┃ ┣ 📜tests.py
+ ┃ ┣ 📜urls.py
+ ┃ ┣ 📜views.py
+ ┃ ┗ 📜__init__.py
+ ┣ 📂Recommendation_System
+ ┃ ┣ 📂__pycache__
+ ┃ ┣ 📜asgi.py
+ ┃ ┣ 📜settings.py
+ ┃ ┣ 📜urls.py
+ ┃ ┣ 📜wsgi.py
+ ┃ ┗ 📜__init__.py
+ ┣ 📂static
+ ┣ 📂templates
+ ┃ ┣ 📜data.html
+ ┃ ┣ 📜index.html
+ ┃ ┣ 📜service.html
+ ┃ ┣ 📜service1.html
+ ┃ ┗ 📜service2.html
+ ┣ 📜db.sqlite3
+ ┣ 📜delivery.xlsx
+ ┣ 📜finance.xlsx
+ ┣ 📜game.xlsx
+ ┣ 📜manage.py
+ ┣ 📜netflix.xlsx
+ ┣ 📜services_priority.xlsx
+ ┣ 📜shopping.xlsx
+ ┣ 📜video.xlsx
+ ┣ 📜youtube.xlsx
+ ┗ 📜zvalue_month.xlsx
         
 ```
 
