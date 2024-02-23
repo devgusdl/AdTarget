@@ -1,95 +1,36 @@
-# 📞통신데이터를 활용한 서비스 패턴 분석 및 광고 추천 시스템📞
-
-- [통신데이터를 활용한 서비스 패턴 분석 및 광고 추천 시스템](#통신데이터를-활용한-서비스-패턴-분석-및-광고-추천-시스템)
-  - [프로젝트 소개](#프로젝트-소개)
-  - [프로젝트 관련 정보](#프로젝트-관련-정보)
-  - [개발 환경](#개발-환경)
-  - [진행 과정](#진행-과정)
-    - [데이터 소개](#데이터-소개)
-    - [데이터 전처리 \& 현황 분석 및 시각화](#데이터-전처리--현황-분석-및-시각화)
-    - [추천 시스템](#추천-시스템)
-    - [Django 웹 서비스 구현](#django-웹-서비스-구현)
-  - [프로젝트 후기](#프로젝트-후기)
 
 
-## 프로젝트 소개
-> 이 프로젝트는 **추천 시스템** (정보 필터링 기술의 일종으로 특정 사용자가 관심을 가질만한 정보를 추천하는 시스템)을 기반으로 통신 데이터를 이용하여 광고 추천, 타겟 고객 추천, 광고 송출 플랫폼 추천 등의 서비스를 구현하는 것을 최종 목적으로 하였습니다. 
-> 
-> 또한, 최종적으로 만들어진 서비스를 Django를 이용해 웹사이트로 구현하는 과정까지 진행하였습니다.
+# 💡 Topic
+
+- **통신데이터를 활용한 서비스 패턴 분석 및 광고 추천 시스템**
+
+# 📝 Summary
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/devgusdl/Semi_Project/main/data/video.gif" width="500" height="350">
 </p>
 
-
-
-
-
-## 프로젝트 관련 정보
-|프로젝트 주제|문제해결 빅데이터 활용 프로젝트|
+|프로젝트 주제|통신데이터를 활용한 서비스 패턴 분석 및 광고 추천 시스템 프로젝트|
 |---|---|
-|팀 세부 주제|통신데이터를 활용한 서비스 패턴 분석 및 광고 추천 시스템 프로젝트|
 |프로젝트 기간|2023.11.14 ~ 2023.12.04 (3주)|
-|팀원 구성|김수연, 김현, 정혜원, 최수정, 최현민|
+|참여 인원|5명|
+|대상|특정 지역에 광고를 진행하고자 하는 광고주들과 각 분야에서 어떤 지역을 타겟으로 광고를 진행할지 고민하는 광고주|
+|기획의도|고객 맞춤형 광고 전략을 개발하여, 고객의 지역, 연령, 성별 등 다양한 요인을 고려하여 광고를 타겟팅하고, 서비스 우선순위를 분석하여 **효율적인 예산 투입** 시기와 서비스를 식별하며, 상위 타겟 고객에게 예산을 집중적으로 투입하여 **광고 효율을 극대화**하고, 세분화된 광고를 특정 서비스에서 송출하여 **광고 효과를 최적화**하는 것|
 
 
-## 개발 환경
-|||
-|---|---|
-|Communication|<img src="https://play-lh.googleusercontent.com/Ob9Ys8yKMeyKzZvl3cB9JNSTui1lJwjSKD60IVYnlvU2DsahysGENJE-txiRIW9_72Vd=w240-h480-rw" height="50">   <img src="https://play-lh.googleusercontent.com/mzJpTCsTW_FuR6YqOPaLHrSEVCSJuXzCljdxnCKhVZMcu6EESZBQTCHxMh8slVtnKqo" height="50">   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Google_Slides_2020_Logo.svg/1200px-Google_Slides_2020_Logo.svg.png" height="50">    <img src="https://play-lh.googleusercontent.com/emmbClh_hm0WpWZqJ0X59B8Pz1mKoB9HVLkYMktxhGE6_-30SdGoa-BmYW73RJ8MGZQ"  height="50">  <img src="https://play-lh.googleusercontent.com/t-juVwXA8lDAk8uQ2L6d6K83jpgQoqmK1icB_l9yvhIAQ2QT_1XbRwg5IpY08906qEw" height="50">|
-|Program| <img src="https://play-lh.googleusercontent.com/37EzETO6gZyKmCg2kBIFX1e9gkubxZrVa5fHJ6yOaa7VvEShHjKv2RdtwnZt9Sk258s" height="50">   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png" height="50">  <img src="https://blog.kakaocdn.net/dn/erEbYY/btrJ3v9wo1K/kc08TL3Rgm67T4txIaZwvk/img.jpg" height="50">|
-|Language|<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" height="50">    <img src="https://images.velog.io/images/gyuseok-dev/post/a4e75d99-1871-4c86-ab87-699e2f526916/HTML&CSS.png" height="70">|
-|Packages & Libraries|<img src="https://rphabet.github.io/assets/images/Numpy/logo.png" height="50">   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1200px-Pandas_logo.svg.png" height="50"> <img src="https://www.jumpingrivers.com/blog/customising-matplotlib/matplot_title_logo.png" height="50">   <img src="https://repository-images.githubusercontent.com/4704710/fd110d80-63d1-11eb-9ae4-de7c23c9dedc" height="50">    <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcFXQFv%2FbtrIRGyVKoT%2FLaS6korks7rH0zmmoQ1Xk0%2Fimg.jpg" height="50">|
-|Framework| <img src="https://velog.velcdn.com/images/guswlsdl0121/post/7f82de3b-c868-411a-87bb-56d8ec6acfd7/image.png" height="50">| 
+# ⭐️ Key Function
 
-## 진행 과정
+- **구매할 물품**의 이름, 이미지, 가격, 메모, 중요도 등을 입력하여 **앱에 등록**
+- 사용자가 등록해둔 물품을 **최신순, 중요도순, 가격순으로 정렬**하여 보여줌
+- 사용자가 등록해둔 물품 키워드 검색 기능 제공 (RxJava Debounce 적용)
+- 아직 구매하지 않은 물품에 대하여 **정기적으로 푸시알림 제공 (WorkManager)**
+- **클립보드에 쇼핑몰 링크가 감지**되면, **물품 정보를 자동으로 채워줌 (OpenGraph 파싱)**
 
-### 데이터 소개
-> 선정한 데이터: 서울 열린데이터 광장의 [서울 시민생활 데이터](https://data.seoul.go.kr/dataVisual/seoul/seoulLiving.do)
->
-> 서울시와 SK텔레콤이 공공빅데이터와 통신데이터 가명결합을 통해 추정한 서울 행정동단위 성, 연령별 1인가구와 서울시민의 생활특성 정보
->
-> 2022년 1월부터 2023년 9월까지 월별 데이터가 존재하며 그 중 2023년 1월부터 2023년 9월까지의 데이터만 사용하여 프로젝트를 진행
+# 🛠 Tech Stack 
 
-|프로젝트에 사용한 피쳐|설명|
-|---|---|
-|자치구|25개 자치구|
-|행정동|426개 행정동|
-|성별|남, 여|
-|연령대|20세부터 75세까지 5살 단위|
-|총인구수|자치구, 행정동, 성별, 연령대에 따른 총인구수|
-|서비스 사용일수|게임, 금융, 배달, 쇼핑, 동영상/방송 서비스에 대해서 최근 3개월의 월 평균 해당 서비스 사용일수(사용일수) / 유튜브, 넷플릭스에 대해서 최근 3개월의 월 평균 해당 서비스 사용일수(z-score)|
+`Excel`, `Jupyter notebook`, `VScode`, `Python`,`HTML`, `CSS`,`JSON`,`Numpy`,`Pandas`,`Matplotlib`, `Seaborn`, `Folium`, `Django`
 
-### 데이터 전처리 & 현황 분석 및 시각화
-
-- 2023년 1~9월까지 데이터를 1개의 파일로 종합
-- 자치구, 성별, 연령대로 그룹화 진행 > 특성을 나타내는 최소단위로 지정
-- 총 300개 단위(행정동 > 자치구 / 성별 > 남, 녀 / 연령대 > 10세 단위) 개인화
-- 원 데이터 중 사용 피쳐 선정 및 추출(자치구, 성별, 연령대, 총인구수, 서비스 7개)
-- 원 데이터 상 z-score(넷플릭스, 유튜브 서비스 사용일수)와 일단위의 나머지 서비스 사용일수 컬럼을 통일하기 위해 StandardScaler를 이용해서 정규화 실행
-- 현황분석 및 시각화
-  - **Bar Plot**: 자치구별 인구 총합
-  - <img src="data/image/image.png" alt="Alt text" width="300"/>
-  - **Map**: 자치구별 평균 연령대
-  - <img src="data/image/image-1.png" alt="Alt text" width="300"/>
-  - **Heatmap**: 연령대별 서비스 간의 상관관계 분석
-  - <img src="data/image/image-2.png" alt="Alt text" width="300"/>
-  - **Line graph**: 서비스별 시계열(월) 분석
-  - <img src="data/image/image-3.png" alt="Alt text" width="300"/>
-- 개인화 데이터 내 7개 서비스의 데이터 사용일수에 따른 가중치를 산정하여 Z-value 값에 가중치를 반영하여 최종 순위 산정
-  - 가중치 = 새로 산출한 가중치(각 서비스의 해당 월 사용일수/월별 총 평균(1~9월) 사용일수) * 원래 구해 놓은 z-value
-
-
-### 추천 시스템
-> 1. **월별 서비스 트렌드 기반 추천 시스템**
-> - 타겟 고객(자치구, 성별, 연령대) 정보 입력시 서비스 사용일수가 높은 순으로 고객별, 월별 맞춤형 서비스 광고 분야 추천
-> - 가중치가 부여된 월별 서비스별 사용일수를 이용해 특정 자치구, 연령대, 성별의 고객이 가장 많이 사용하는 서비스 순으로 추천을 진행함
-> 2. **서비스 사용일수에 따른 Top N recommendation 추천 시스템**
-> - 특정 서비스 기업에서 광고를 진행할 때 타겟 고객 추천 및 해당 광고를 어떤 서비스 분야의 플랫폼에 송출하면 좋은지 추천
-> - z-value로 처리된 서비스별 사용일수 데이터의 각 서비스 사용일수 컬럼을 기준으로 내림차순 정렬한 데이터프레임을 서비스별로 생성 (타겟 고객 선정)
-> - 타겟 고객별로 선택한 서비스와 다른 서비스들 간의 상관계수를 구해서 특정 서비스의 광고를 송출할 타 서비스 플랫폼을 추천
-
-### Django 웹 서비스 구현
+# 📷 Screenshot
 
 - 프로젝트 구조
 
@@ -129,18 +70,25 @@
         
 ```
 
+
+- 메인 페이지
+  - navbar 각 항목 별 이동 가능
+  - 좌우로 화면 전환 가능
+  
+ <img src="data/image/1.JPG" alt="Alt text"/>
+  
 - 서비스 소개 페이지
   - 전체적인 서비스 소개
-  - 각 서비스로 이어져 있는 버튼을 클릭하면 서비스로 바로 갈 수 있음
+  - 각 서비스로 이어져 있는 버튼을 클릭하면 서비스 이동 가능
 
-<img src="data/image/image-4.png" alt="Alt text" width="800"/>
+<img src="data/image/2.JPG" alt="Alt text"/>
 
 - 데이터 소개 및 현황 분석 페이지
   - 추천 서비스에 사용된 데이터 소개
   - 자치구 연령대별 인구 총합 그래프, 자치구 연령대별 남성 인구 총합 그래프, 자치구 연령대별 여성 인구 총합 그래프, 서비스별 상관관계 히트맵, 자치구별 평균연령 지도 시각화 등으로 현황 분석 결과를 보여줌
 
-<img src="data/image/image-5.png" alt="Alt text" width="200"/><img src="data/image/image-6.png" alt="Alt text" width="200"/>
-<img src="data/image/image-7.png" alt="Alt text" width="200"/><img src="data/image/image-8.png" alt="Alt text" width="200"/>
+<img src="data/image/image-5.png" alt="Alt text" style="width: 200px; height: auto;" /><img src="data/image/image-6.png" alt="Alt text" style="width: 200px; height: auto;" />
+<img src="data/image/image-7.png" alt="Alt text" style="width: 200px; height: auto;" /><img src="data/image/image-8.png" alt="Alt text" style="width: 200px; height: auto;" />
 
 
 
@@ -148,19 +96,29 @@
   - 고객이 거주하는 자치구, 연령대, 성별 정보를 선택하면 광고 알고리즘에 보일 서비스를 우선순위에 따라 추천해주는 서비스
   - 2023년 1월부터 9월까지 해당 고객 군집의 서비스별 사용일수 추이 또한 그래프로 시각화하여 보여줌
 
-<img src="data/image/image-9.png" alt="Alt text" width="400"/>
+<img src="data/image/6.JPG" alt="Alt text"/>
+<img src="data/image/7.JPG" alt="Alt text"/>
 
 - 서비스별 타겟 고객 및 광고 송출 서비스 추천
   - 게임, 금융, 쇼핑, 동영상/방송, 유튜브, 넷플릭스, 배달 서비스의 7개의 서비스 중 선택한 서비스에 대해 해당 서비스의 이용수가 가장 많은 타겟 고객의 자치구, 연령대, 성별을 우선순위 순으로 정렬
   - 타겟 고객별로 선택한 서비스와 상관관계가 높은 순으로 맞춤형 광고 송출 대상 서비스를 추천하는 서비스
 
-<img src="data/image/image-10.png" alt="Alt text" width="400"/>
+<img src="data/image/8.JPG" alt="Alt text"/>
+<img src="data/image/9.JPG" alt="Alt text"/>
 
+# 🤚🏻 Part
 
-## 리뷰
+**팀 프로젝트(문제해결 빅데이터 활용 프로젝트)**
+- 데이터 전처리
+- 현황분석 및 시각화
+- 추천 시스템 서비스 구현
+- Django 웹 서비스 구현
 
-- Python을 활용한 데이터 분석 기법을 익히는 과정에서, 데이터 분석 능력 및 Python 활용 능력 강화
-- 데이터 전처리 과정에서 단위 통일, 데이터 구분 및 가중치 부여 등을 경험하며 데이터 전처리 능력을 향상
-- Bar plot, Map, Line graph, Heatmap 등 다양한 데이터 시각화 도구를 통한 복잡한 데이터를 이해하고 전달하는 능력 향상
-- Django 프레임워크의 서비스 구현 방법을 실제로 활용함으로써 구현 능력 향상
-- 추천 시스템에 대한 이해를 바탕으로 실제 시스템에 적용하는 방법도 배우며, 이를 통한 추천 시스템 구현 능력 강화
+# 🤔 Learned
+
+- Python을 활용한 데이터 분석 기법을 익히는 과정에서, **`데이터 분석`** 능력 및 **`Python`** 활용 능력 강화
+- **`데이터 전처리`** 과정에서 단위 통일, 데이터 구분 및 가중치 부여 등을 경험하며 데이터 전처리 능력을 향상
+- Bar plot, Map, Line graph, Heatmap 등 다양한 **`데이터 시각화`** 도구를 통한 복잡한 데이터를 이해하고 전달하는 능력 향상
+- Django 프레임워크의 **`서비스 구현`** 방법을 실제로 활용함으로써 구현 능력 향상
+- 추천시스템에 대한 이해를 바탕으로 실제 시스템에 적용하는 방법도 배우며, 이를 통한 **`추천 시스템`** 구현 능력 강화
+
